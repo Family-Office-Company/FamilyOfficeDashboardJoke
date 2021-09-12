@@ -24,17 +24,27 @@ Lighten up your work day with a fresh joke every time you open the dashboard!
 
 ## Usage
 
+### Composer
+
 Install and activate the plugin in your Shopware instance.
 
-```
+```shell
 composer require family-office/dashboard-joke
 ```
 
-```
+```shell
 bin/console plugin:refresh && bin/console plugin:install FamilyOfficeDashboardJoke --activate
 ```
 
-The only thing that's left to do for the plugin to work is to link your shops hidden service via the plugin configuration.
+The only thing that's left to do for the plugin to work is to build the administration.
+
+```shell
+bin/build-administration.sh
+```
+
+### Download
+
+Alternatively to installing the plugin via Composer and building it yourself, you can download the latest pre-built release [here](https://github.com/Family-Office-Company/FamilyOfficeDashboardJoke/releases/latest) and install it manually in your Shopware instance.
 
 ## Development
 
