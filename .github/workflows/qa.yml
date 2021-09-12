@@ -1,0 +1,35 @@
+name: Quality analysis
+
+on: [ push ]
+
+jobs:
+  composer_normalize:
+    name: composer.json normalizer
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 7.4
+          extensions: gd
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: make install
+
+      - name: composer normalize
+        run: composer normalize --dry-run
+
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install modules
+        run: npm install
+
+      - name: Run ESLint
+        run: npx eslint ./

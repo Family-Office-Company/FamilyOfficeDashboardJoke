@@ -1,0 +1,5 @@
+/node_modules/
+/vendor/
+/src/Resources/public/
+/composer.lock
+/package-lock.json

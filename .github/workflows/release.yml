@@ -1,0 +1,36 @@
+name: Release Plugin
+
+on:
+  push:
+    tags:
+      - '*'
+
+env:
+  PLUGIN_NAME: ${{ github.event.repository.name }}
+  PLUGIN_UPLOADER_VERSION: 0.3.16
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+        with:
+          path: ${{ env.PLUGIN_NAME }}
+
+      - name: Fix permissions
+        run: mkdir $(pwd)/${PLUGIN_NAME}/src/Resources/public && chmod -R 777 $(pwd)/${PLUGIN_NAME}/src/Resources/public
+
+      - name: Build JavaScript
+        run: sudo docker run --rm -e BUILD_PLUGIN=${PLUGIN_NAME} -v $(pwd)/${PLUGIN_NAME}:/var/www/html/custom/plugins/${PLUGIN_NAME} dockware/dev:latest
+
+      - name: Install Plugin Uploader
+        run: wget 'https://github.com/FriendsOfShopware/FroshPluginUploader/releases/download/${{ env.PLUGIN_UPLOADER_VERSION }}/frosh-plugin-upload.phar' -O frosh-plugin-upload.phar
+
+      - name: Build Zip
+        run: php frosh-plugin-upload.phar ext:zip ${PLUGIN_NAME}
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ env.PLUGIN_NAME }}*.zip

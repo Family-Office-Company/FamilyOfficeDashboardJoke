@@ -1,0 +1,52 @@
+{
+  "name": "family-office/dashboard-joke",
+  "type": "shopware-platform-plugin",
+  "description": "Displays a random joke on Shopware 6's administration dashboard.",
+  "keywords": [
+    "shopware-platform-plugin",
+    "jokes",
+    "dashboard"
+  ],
+  "homepage": "https://github.com/Family-Office-Company/FamilyOfficeDashboardJoke",
+  "readme": "README.md",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Family Office",
+      "email": "contact@family-office.holdings",
+      "homepage": "https://github.com/Family-Office-Company",
+      "role": "Manufacturer"
+    }
+  ],
+  "require": {
+    "shopware/storefront": "^6.4"
+  },
+  "require-dev": {
+    "ergebnis/composer-normalize": "^2.15",
+    "roave/security-advisories": "dev-latest"
+  },
+  "extra": {
+    "description": {
+      "de-DE": "Displays a random joke on Shopware 6's administration dashboard.",
+      "en-GB": "Displays a random joke on Shopware 6's administration dashboard."
+    },
+    "label": {
+      "de-DE": "Dashboard Witz",
+      "en-GB": "Dashboard Joke"
+    },
+    "manufacturerLink": {
+      "de-DE": "https://github.com/Family-Office-Company",
+      "en-GB": "https://github.com/Family-Office-Company"
+    },
+    "shopware-plugin-class": "FamilyOffice\\DashboardJoke\\FamilyOfficeDashboardJoke"
+  },
+  "autoload": {
+    "psr-4": {
+      "FamilyOffice\\DashboardJoke\\": "src/"
+    }
+  },
+  "support": {
+    "issues": "https://github.com/Family-Office-Company/FamilyOfficeDashboardJoke/issues"
+  }
+}
