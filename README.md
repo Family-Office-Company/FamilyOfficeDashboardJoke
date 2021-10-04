@@ -44,14 +44,14 @@ bin/build-administration.sh
 
 ### Download
 
-Alternatively to installing the plugin via Composer and building it yourself, you can download the latest pre-built release [here](https://github.com/Family-Office-Company/FamilyOfficeDashboardJoke/releases/latest) and install it manually in your Shopware instance.
+Alternatively to installing the plugin via Composer and building it yourself, you can download the latest pre-built release [here](https://github.com/FamilyOfficeOrg/FamilyOfficeDashboardJoke/releases/latest) and install it manually in your Shopware instance.
 
 ## Development
 
 Clone the project into your Shopware installation
 
 ```shell
-git clone git@github.com:Family-Office-Company/FamilyOfficeDashboardJoke.git
+git clone git@github.com:FamilyOfficeOrg/FamilyOfficeDashboardJoke.git
 ```
 
 ```shell

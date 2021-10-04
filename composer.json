@@ -7,7 +7,7 @@
     "jokes",
     "dashboard"
   ],
-  "homepage": "https://github.com/Family-Office-Company/FamilyOfficeDashboardJoke",
+  "homepage": "https://github.com/FamilyOfficeOrg/FamilyOfficeDashboardJoke",
   "readme": "README.md",
   "version": "1.0.0",
   "license": "MIT",
@@ -15,7 +15,7 @@
     {
       "name": "Family Office",
       "email": "contact@family-office.holdings",
-      "homepage": "https://github.com/Family-Office-Company",
+      "homepage": "https://github.com/FamilyOfficeOrg",
       "role": "Manufacturer"
     }
   ],
@@ -36,8 +36,8 @@
       "en-GB": "Dashboard Joke"
     },
     "manufacturerLink": {
-      "de-DE": "https://github.com/Family-Office-Company",
-      "en-GB": "https://github.com/Family-Office-Company"
+      "de-DE": "https://github.com/FamilyOfficeOrg",
+      "en-GB": "https://github.com/FamilyOfficeOrg"
     },
     "shopware-plugin-class": "FamilyOffice\\DashboardJoke\\FamilyOfficeDashboardJoke"
   },
@@ -47,6 +47,6 @@
     }
   },
   "support": {
-    "issues": "https://github.com/Family-Office-Company/FamilyOfficeDashboardJoke/issues"
+    "issues": "https://github.com/FamilyOfficeOrg/FamilyOfficeDashboardJoke/issues"
   }
 }
